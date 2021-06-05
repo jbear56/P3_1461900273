@@ -10,12 +10,12 @@ class BukuController extends Controller
     public function index(){
 
         $buku = Buku::all();
-        return view('buku0243', ['buku' => $buku]);
+        return view('buku0273', ['buku' => $buku]);
     }
 
     public function create(){
 
-        return view('buku_tambah0243');
+        return view('buku_tambah0273');
     }
 
     public function store(Request $request){
@@ -26,7 +26,7 @@ class BukuController extends Controller
             'buku_judul' => $request->buku_judul,
         ]);
 
-        return redirect('buku0243');
+        return redirect('buku0273');
     }
 
     public function show($id){
@@ -38,7 +38,7 @@ class BukuController extends Controller
 
         $buku = Buku::find($id);
 
-        return view('buku_edit0243', ['buku' => $buku]);
+        return view('buku_edit0273', ['buku' => $buku]);
 
     }
 
@@ -49,7 +49,7 @@ class BukuController extends Controller
         $buku->buku_judul = $request->buku_judul;
         $buku->save();
 
-        return redirect('buku0243');
+        return redirect('buku0273');
 
     }
 
@@ -58,7 +58,7 @@ class BukuController extends Controller
         $buku = Buku::find($id);
         $buku->delete();
 
-        return reirect('buku0243');
+        return reirect('buku0273');
     }
 }
 © 2021 GitHub, Inc.
